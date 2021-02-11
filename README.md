@@ -3,9 +3,9 @@ Análisis, diseño y construcción de software (Gpo 1)
 
 ## 1 – FIND THE NUMBER
 ### Description
-Create a program invoked in the command line. It generates a random number between 1 and 9 (including 1 and 30). Ask the user to guess the number, then tell them whether they guessed too low, too high, or exactly right. 
+Create a program invoked in the command line. It generates a random number between 1 and 30 (including 1 and 30). Ask the user to guess the number, then tell them whether they guessed too low, too high, or exactly right. 
 
-- Keep the game going until the user types “exit”or find the number
+- Keep the game going until the user types “exit” or find the number
 - Keep track of how many guesses the user has taken, and when the game ends, print them out on console and in a file named GuessingSteps.txtName of the program: findNumber.py
 
 ### Practice
@@ -19,7 +19,9 @@ Create a program invoked in the command line. It generates a random number betwe
 
 ## 2 - CONVERTER
 ### Description
-Create a command line program that take as input parameter a number and then it displays in the console the corresponding number in Binary and Hexadecimal. It also manages errors using exceptions for not using numbers. Convert the number using the algorithm and not a function.
+Create a command line program that take as input parameter a number and then it displays in the console the corresponding number (positive integers Plus Zero) in Binary and Hexadecimal. It also manages errors using exceptions for not using numbers.
+
+Covert the number using the algorithm and not a function.
 
 Name of the program: convert2X.py
 
@@ -31,7 +33,7 @@ Name of the program: convert2X.py
 ### Test Cases and Evidence
 - Identify 10 test cases
 
-## 3 – Count Words
+## 3 – COUNT WORDS
 ### Description
 Create a program that parses a file given as parameter and counts the number of occurrences for a list of words identified in the file. The identification is sensitive case.
 

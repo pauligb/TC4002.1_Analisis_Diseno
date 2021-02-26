@@ -6,7 +6,9 @@ Análisis, diseño y construcción de software (Gpo 1)
 Create a program invoked in the command line. It generates a random number between 1 and 30 (including 1 and 30). Ask the user to guess the number, then tell them whether they guessed too low, too high, or exactly right. 
 
 - Keep the game going until the user types “exit” or find the number
-- Keep track of how many guesses the user has taken, and when the game ends, print them out on console and in a file named GuessingSteps.txtName of the program: findNumber.py
+- Keep track of how many guesses the user has taken, and when the game ends, print them out on console and in a file named GuessingSteps.txt
+
+Name of the program: findNumber.py
 
 ### Practice
 - Control structures
@@ -21,7 +23,7 @@ Create a program invoked in the command line. It generates a random number betwe
 ### Description
 Create a command line program that take as input parameter a number and then it displays in the console the corresponding number (positive integers Plus Zero) in Binary and Hexadecimal. It also manages errors using exceptions for not using numbers.
 
-Covert the number using the algorithm and not a function.
+Convert the number using the algorithm and not a function.
 
 Name of the program: convert2X.py
 
@@ -48,3 +50,17 @@ Name of the program: findWords.py
 
 ### Test Cases and Evidence
 - Identify 3 test cases
+
+## 4–Python Failing
+### Description
+You need to create two functions to substitute str() and int(). A function called int_to_str() that converts integers into strings, and a function called str_to_int() that converts strings into integers.
+
+### Test Cases and Evidence
+- Provide 10 test cases for each function
+
+## 5-Profit
+### Description
+You work for a manufacturer, and have been asked to calculate the total profit made on the sales of a product. You are given a dictionary containing the cost price per unit(in dollars), sell price per unit(in dollars), and the starting inventory. Return the total profit made, rounded to the nearest dollar.
+
+### Test Cases and Evidence
+- Provide10 test cases

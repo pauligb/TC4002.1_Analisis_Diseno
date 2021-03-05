@@ -5,6 +5,10 @@ import sys
 
 from src.records_handler import RecordsHandler
 
+# Boundary from Right-BICEP is considered in the test cases
+# Inverse relationship from Right-BICEP is considered in the test cases
+# Cross-check form Right-BICEP is considered in the test cases
+# Error conditions from Right-BICEP is considered in the test cases by using assertions
 
 class TestRecordsHandler(unittest.TestCase):
     def setUp(self):

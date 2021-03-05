@@ -1,6 +1,9 @@
 import unittest
 import filecmp
 
+# Boundary from Right-BICEP is considered in the test cases
+# Inverse relationship from Right-BICEP is considered in the test cases
+# Error conditions from Right-BICEP is considered in the test cases by using assertions
 
 class TestFilecmpCmp(unittest.TestCase):
     def test_different_content_shallow(self):

@@ -28,4 +28,4 @@ jobs:
       - name: Execute all tests
         working-directory: ./Lab3
         run: |
-          python run-tests.py
+          python run_tests.py

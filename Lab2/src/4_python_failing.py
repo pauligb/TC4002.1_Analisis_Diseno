@@ -24,7 +24,7 @@ def str_to_int(string_number):
 
   return number
 
-int_test_values = [-1, 0, 1, 5, 12345, 98765, 4116, 6622, 999, 00015]
+int_test_values = [-1, 0, 1, 5, 12345, 98765, 4116, 6622, 999, 15]
 
 print('int_to_str Test Cases ({0}):'.format(len(int_test_values)))
 print('')

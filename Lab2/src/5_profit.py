@@ -1,15 +1,10 @@
-# profit({
-#   "cost_price": 32.67,
-#   "sell_price": 45.00,
-#   "inventory": 1200}) -> 14796
-
 def profit(data):
 	total_profit = (data['sell_price'] - data['cost_price']) * data['inventory']
 	return int(round(total_profit))
 
 test_cases_cost_lower = [
-	{"cost_price": 0.00,"sell_price": 2.00,"inventory": 100},
-	{"cost_price": 1.00,"sell_price": 2.00,"inventory": 100},
+	{"cost_price": 2.77,"sell_price": 7.95,"inventory": 8500},
+	{"cost_price": 225.89,"sell_price": 550.00,"inventory": 100},
 	{"cost_price": 32.67,"sell_price": 45.00,"inventory": 1200}
 ]
 

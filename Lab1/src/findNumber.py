@@ -21,7 +21,7 @@ printAll(output_file, 'A random number between 1-30 was generated')
 
 while True:
   printAll(output_file, '')
-  input_value = raw_input('Input between 1-30: ')
+  input_value = input('Input between 1-30: ')
   output_file.write('Input between 1-30: ' + input_value + '\n')
 
   if input_value == 'exit':
@@ -29,7 +29,7 @@ while True:
     break
 
   if not is_int(input_value):
-    printAll(output_file, string(input_value) + 'Is not a number.')
+    printAll(output_file, str(input_value) + 'Is not a number.')
     continue
 
   input_int = int(input_value)

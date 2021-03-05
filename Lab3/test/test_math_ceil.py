@@ -1,8 +1,8 @@
 import unittest
 import math
 
-class TestMathCeil(unittest.TestCase):
 
+class TestMathCeil(unittest.TestCase):
     def test_positive_number(self):
         self.assertEqual(math.ceil(101.96), 102)
 

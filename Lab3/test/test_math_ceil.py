@@ -1,17 +1,17 @@
 import unittest
+import math
 
 class TestMathCeil(unittest.TestCase):
 
-    def test_upper(self):
-        self.assertEqual('foo'.upper(), 'FOO')
+    def test_positive_number(self):
+        self.assertEqual(math.ceil(101.96), 102)
 
-    def test_isupper(self):
-        self.assertTrue('FOO'.isupper())
-        self.assertFalse('Foo'.isupper())
+    def test_almost_zero(self):
+        self.assertEqual(math.ceil(0.1), 1)
+        self.assertEqual(math.ceil(-0.1), 0)
 
-    def test_split(self):
-        s = 'hello world'
-        self.assertEqual(s.split(), ['hello', 'world'])
-        # check that s.split fails when the separator is not a string
-        with self.assertRaises(TypeError):
-            s.split(2)
+    def test_is_zero(self):
+        self.assertEqual(math.ceil(0.0), 0)
+
+    def test_negative_number(self):
+        self.assertEqual(math.ceil(-13.1), -13)

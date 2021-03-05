@@ -1,0 +1,1 @@
+The path of first file to be compared. It can be a string, bytes, os.PathLike object or an integer representing the path of the file.

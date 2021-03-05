@@ -4,7 +4,7 @@ import sys
 
 
 def remove_special_characters(text):
-    return re.sub(r'\W+', ' ', text)
+    return re.sub(r"\W+", " ", text)
 
 
 def count_words(text, words):
@@ -25,14 +25,14 @@ def count_words(text, words):
 number_of_arguments = len(sys.argv)
 
 if number_of_arguments < 2:
-    print('There are no argument.')
+    print("There are no argument.")
     exit()
 
 file_path = sys.argv[1]
 words_to_search = sys.argv[2:]
 
 if not path.exists(file_path):
-    print('File: ', file_path, ' does not exist.')
+    print("File: ", file_path, " does not exist.")
     exit()
 
 file = open(file_path, "r")

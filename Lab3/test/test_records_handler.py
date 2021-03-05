@@ -11,6 +11,8 @@ class TestRecordsHandler(unittest.TestCase):
         # Not mocking any object because it is time consuming to
         # discover mocking for this Lab.
         self.recordsHandler = RecordsHandler("resources/lab3DB.db")
+        # Making sure that there are no records in each test case
+        self.recordsHandler.delete_all()
 
     def test_add_record(self):
         capturedOutput = io.StringIO()  # Create StringIO object
@@ -85,5 +87,4 @@ class TestRecordsHandler(unittest.TestCase):
         sys.stdout = sys.__stdout__  # Reset redirect.
 
     def tearDown(self):
-        os.remove("resources/lab3DB.db")
         self.recordsHandler.close_connection()

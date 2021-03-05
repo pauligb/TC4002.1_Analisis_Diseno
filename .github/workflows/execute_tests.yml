@@ -1,9 +1,5 @@
 name: Execute Tests
-on:
-  pull_request:
-    paths:
-      -'Lab3/src/**'
-      -'Lab3/test/**'
+on: [pull_request]
 jobs:
   execute_lab3_test:
     name: 'Execute Lab3 Test'

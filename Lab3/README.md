@@ -24,6 +24,6 @@ The class should have capabilities to:\
 	- List on screen all record information
 	
 # Disclaimer
-This lab was addressed as a team, with following members:\
-- Paul Iván Gallegos Bernal     - A01220356\
+This lab was addressed as a team, with following members:
+- Paul Iván Gallegos Bernal - A01220356
 - Héctor Gabriel Olagues Torres - A00354877

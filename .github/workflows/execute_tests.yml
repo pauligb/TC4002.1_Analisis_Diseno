@@ -1,5 +1,5 @@
 name: Execute Tests
-on: [pull_request]
+on: [push, pull_request]
 jobs:
   execute_lab3_test:
     name: 'Execute Lab3 Test'
@@ -28,7 +28,7 @@ jobs:
       - name: Execute all tests
         working-directory: ./Lab3
         run: |
-          python run_tests.py
+          coverage run -m run_tests.py
       - name: Execute Coverage
         working-directory: ./Lab3
         run: |

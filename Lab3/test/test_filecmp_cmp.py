@@ -5,6 +5,7 @@ import filecmp
 # Inverse relationship from Right-BICEP is considered in the test cases
 # Error conditions from Right-BICEP is considered in the test cases by using assertions
 
+
 class TestFilecmpCmp(unittest.TestCase):
     def test_different_content_shallow(self):
         # file0 = os.path.join(os.path.dirname(__file__), '../resources/file0.txt')

@@ -1,7 +1,10 @@
 import unittest
-import os
 import io
 import sys
+
+from sqlite3 import Error
+from unittest.mock import patch
+from unittest.mock import MagicMock
 
 from src.records_handler import RecordsHandler
 
@@ -9,6 +12,7 @@ from src.records_handler import RecordsHandler
 # Inverse relationship from Right-BICEP is considered in the test cases
 # Cross-check form Right-BICEP is considered in the test cases
 # Error conditions from Right-BICEP is considered in the test cases by using assertions
+
 
 class TestRecordsHandler(unittest.TestCase):
     def setUp(self):
@@ -89,6 +93,13 @@ class TestRecordsHandler(unittest.TestCase):
         )
 
         sys.stdout = sys.__stdout__  # Reset redirect.
+
+    @patch("src.records_handler.sqlite3")
+    def test_delete_record_throw_exception(self, mockSqlite3):
+        mockSqlite3.connect = MagicMock(side_effect=Error("foo"))
+
+        with self.assertRaises(Error):
+            RecordsHandler("invalid.xlm")
 
     def tearDown(self):
         self.recordsHandler.close_connection()

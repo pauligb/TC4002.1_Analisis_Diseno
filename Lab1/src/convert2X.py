@@ -23,7 +23,7 @@ hex_mapping = {
 def base_converter(num, base):
     if base <= 0:
         print("Incorrect base: ", base)
-        exit()
+        sys.exit()
 
     if num == 0:
         return "0"
@@ -49,7 +49,7 @@ number_of_arguments = len(sys.argv)
 
 if number_of_arguments < 2:
     print("There are no argument.")
-    exit()
+    sys.exit()
 
 arg0 = sys.argv[1]
 
@@ -58,13 +58,13 @@ if number_of_arguments > 2:
 
 if not is_int(arg0):
     print("The submitted value ", arg0, " is not a number, try again.")
-    exit()
+    sys.exit()
 
 number = int(arg0)
 
 if number < 0:
     print("The number ", number, "is negative. You must pass a non negative integer.")
-    exit()
+    sys.exit()
 
 binary_number = base_converter(number, 2)
 hex_number = base_converter(number, 16)

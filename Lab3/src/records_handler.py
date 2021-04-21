@@ -1,5 +1,8 @@
+import logging
 import sqlite3
+from sqlite3 import Error
 
+logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
 
 class RecordsHandler:
     def __init__(self, db_file):
@@ -18,12 +21,14 @@ class RecordsHandler:
         self.conn = None
 
         self.conn = sqlite3.connect(db_file)
+        logging.info('Connection established to ' + db_file)
 
         self.create_table(self.sql_create_projects_table)
 
     def close_connection(self):
         if self.conn:
             self.conn.close()
+            logging.info('Connection closed')
 
     def create_table(self, create_table_sql):
         """create a table from the create_table_sql statement
@@ -34,6 +39,7 @@ class RecordsHandler:
         c = self.conn.cursor()
         c.execute(create_table_sql)
         self.conn.commit()
+        logging.info('Creating Records table')
 
     def add_record(self, name="", email="", age="", origin=""):
         sqlquery = "INSERT INTO Records (name, email, age, origin) VALUES ('%s', '%s', '%s', '%s')"
@@ -43,6 +49,7 @@ class RecordsHandler:
         c = self.conn.cursor()
         c.execute(query)
         self.conn.commit()
+        logging.info('New record added')
 
     def delete_record(self, record_id=-1):
         sqlquery = "DELETE FROM Records WHERE id='%s'"
@@ -52,6 +59,7 @@ class RecordsHandler:
         c = self.conn.cursor()
         c.execute(query)
         self.conn.commit()
+        logging.info('Record with id ' + str(record_id) + ' deleted.')
 
     def look(self, email="", age=""):
         sqlquery = "SELECT * FROM Records WHERE email='%s' AND age='%s'"

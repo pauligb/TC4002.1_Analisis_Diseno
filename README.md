@@ -64,3 +64,8 @@ You work for a manufacturer, and have been asked to calculate the total profit m
 
 ### Test Cases and Evidence
 - Provide10 test cases
+
+=======================================================================
+### Lab 9.2 Continuous Integration
+- CI implemented in Jenkins Server: http://129.159.46.168:8080/
+- Jenkins Job C4002.1_Analisis_Diseno (http://129.159.46.168:8080/job/C4002.1_Analisis_Diseno/) triggered by a Pull Request or by a Push operation in GitHub repository https://github.com/pauligb/TC4002.1_Analisis_Diseno
